@@ -136,7 +136,7 @@ async def get_tournament_rankings(tournament_id:str,stage:str=None):
             # # # tournament_games_player_stats = player_stats[player_stats['tournamentID']==tournament_id]
 
             if stage != None:
-                tournament_games_team_stats = tournament_games_team_stats[tournament_games_team_stats['tournamentID']==stage]
+                tournament_games_team_stats = tournament_games_team_stats[tournament_games_team_stats['stageName']==stage]
                 # # # tournament_games_player_stats = tournament_games_player_stats[tournament_games_player_stats['tournamentID']==stage]
 
             tournament_teams = tournament_games_team_stats['teamOnlineID'].unique()
